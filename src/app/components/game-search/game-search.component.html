@@ -1,13 +1,14 @@
 <div>
     <div class="search-container">
         <mat-form-field appearance="outline">
-            <input matInput type="text" [(ngModel)]="searchText" placeholder="Search for games" />
+            <input matInput type="text" [(ngModel)]="searchText" placeholder="Search for games"
+                (keyup.enter)="search()" />
         </mat-form-field>
 
         <button mat-raised-button color="primary" (click)="search()">Search</button>
     </div>
     <div class="searched-games">
-        <mat-card class="game-card" *ngFor="let game of games">
+        <mat-card class="game-card" *ngFor="let game of games" (click)="goToGameDetails(game)">
             <div class="card-title-container">
                 <mat-card-title>{{game?.name}}</mat-card-title>
             </div>
@@ -16,7 +17,8 @@
                 <div>{{game?.description_preview | slice: 0:80}} ...</div>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-mini-fab color="primary" matTooltip="Add to list of owned games" (click)="updateOwnedList($event, game)">
+                <button mat-mini-fab color="primary" matTooltip="Add to list of owned games"
+                    (click)="updateOwnedList($event, game)">
                     <mat-icon class="material-icons-outlined">verified</mat-icon>
                 </button>
                 <button mat-mini-fab matTooltip="Add to wishlist" (click)="updateWishlist($event, game)">

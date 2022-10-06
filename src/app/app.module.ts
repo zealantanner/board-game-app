@@ -14,23 +14,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SideNavComponent,
-    GameSearchComponent,
-    GameDetailsComponent,
-    GameDetailControlsComponent,
-    UserSelectionsComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    HttpClientModule,
-    FormsModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        SideNavComponent,
+        GameSearchComponent,
+        GameDetailsComponent,
+        GameDetailControlsComponent,
+        UserSelectionsComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        HttpClientModule,
+        FormsModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -19,8 +19,6 @@ export class LocalStorageService {
         } else {
             gameList = [...gameList, game];
         }
-        console.log(listType.valueOf())
-        localStorage.setItem('hi', 'hello')
         localStorage.setItem(listType.valueOf(), JSON.stringify(gameList));
 
         const parsedUpdateList = JSON.parse(localStorage.getItem(listType.valueOf()) || '[]');

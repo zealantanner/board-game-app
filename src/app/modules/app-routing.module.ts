@@ -1,23 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GameDetailsComponent } from '../components/game-details/game-details.component';
 import { GameSearchComponent } from '../components/game-search/game-search.component'
 import { UserSelectionsComponent } from '../components/user-selections/user-selections.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'search', pathMatch: 'full' },
-  { path: 'search', component: GameSearchComponent },
-  { path: 'owned', component: UserSelectionsComponent },
-  { path: 'wishlist', component: UserSelectionsComponent },
+    { path: '', redirectTo: 'search', pathMatch: 'full' },
+    { path: 'search', component: GameSearchComponent },
+    { path: 'game-details', component: GameDetailsComponent },
+    { path: 'owned', component: UserSelectionsComponent },
+    { path: 'wishlist', component: UserSelectionsComponent },
 ];
-// const routes: Routes = [
-//   { path: 'search', redirectTo: '', pathMatch: 'full' },
-//   { path: '', component: GameSearchComponent },
-//   { path: 'owned', component: UserSelectionsComponent },
-//   { path: 'wishlist', component: UserSelectionsComponent },
-// ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
